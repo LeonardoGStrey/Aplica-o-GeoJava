@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometria Plana</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="plana.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1 class="header-title">Geometria Plana</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <div class="grid">
+                
+                
+                <button type="button" class="card" onclick="window.location.href='quadrado.java'">
+                    <div class="card-content">
+                        <div class="image-container">
+                            <img 
+                                src="https://images.educamaisbrasil.com.br/content/banco_de_imagens/guia-de-estudo/D/area-do-quadrado-matematica.jpg" 
+                                alt="Figuras geométricas planas" 
+                            />
+                        </div>
+                        <h2 class="card-title">Quadrado</h2>
+                        <p class="card-description">
+                            Cálculos de figuras quadradas
+                        </p>
+                    </div>
+                </button>
+
+                <button type="button" class="card" onclick="window.location.href='retangulo.java'">
+                    <div class="card-content">
+                        <div class="image-container">
+                            <img 
+                                src="https://s5.static.brasilescola.uol.com.br/be/2021/03/3-diagonal.jpg" 
+                                alt="Figuras geométricas planas" 
+                            />
+                        </div>
+                        <h2 class="card-title">Retângulo</h2>
+                        <p class="card-description">
+                            Cálculos de figuras retangulares
+                        </p>
+                    </div>
+                </button>
+
+                <button type="button" class="card" onclick="window.location.href='triangulo.java'">
+                    <div class="card-content">
+                        <div class="image-container">
+                            <img 
+                                src="https://s3.static.brasilescola.uol.com.br/be/2021/08/exemplo-triangulo-area.jpg" 
+                                alt="Figuras geométricas planas" 
+                            />
+                        </div>
+                        <h2 class="card-title">Triângulo</h2>
+                        <p class="card-description">
+                            Cálculos de figuras triangulares
+                        </p>
+                    </div>
+                </button>
+
+                <button type="button" class="card" onclick="window.location.href='trianguloequilatero.java'">
+                    <div class="card-content">
+                        <div class="image-container">
+                            <img 
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvDg5ifDkJ1-tAG4IeYMKCoDkWy_9Ihd2xHw&s" 
+                                alt="Figuras geométricas planas" 
+                            />
+                        </div>
+                        <h2 class="card-title">Triângulo Equilátero</h2>
+                        <p class="card-description">
+                            Cálculos de figuras triangulares de forma equilátera
+                        </p>
+                    </div>
+                </button>
+
+
+            <button type="button" class="card" onclick="window.location.href='Paralelogramo.java'">
+                    <div class="card-content">
+                        <div class="image-container">
+                            <img 
+                                src="https://www.preparaenem.com/upload/conteudo/images/base-e-altura-do-paralelogramo.jpg" 
+                                alt="Figuras geométricas planas" 
+                            />
+                        </div>
+                        <h2 class="card-title">Paralelogramo</h2>
+                        <p class="card-description">
+                            Cálculos de paralelogramos
+                        </p>
+                    </div>
+                </button>
+
+
+                <button type="button" class="card" onclick="window.location.href='losango.java'">
+                    <div class="card-content">
+                        <div class="image-container">
+                            <img 
+                   src="https://static.todamateria.com.br/upload/lo/sa/losango2.jpg"             
+                   alt="Figuras geométricas planas" 
+                            />
+                        </div>
+                        <h2 class="card-title">Losango</h2>
+                        <p class="card-description">
+                            Cálculos de losangos
+                        </p>
+                    </div>
+                </button>
+
+
+                <button type="button" class="card" onclick="window.location.href='trapezio.java'">
+                    <div class="card-content">
+                        <div class="image-container">
+                            <img 
+                                src="data:image/png;base64,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" 
+                                alt="Figuras geométricas planas" 
+                            />
+                        </div>
+                        <h2 class="card-title">Trapézio</h2>
+                        <p class="card-description">
+                            Cálculos de trapézio
+                        </p>
+                    </div>
+                </button>
+
+
+                <button type="button" class="card" onclick="window.location.href='circulo.java'">
+                    <div class="card-content">
+                        <div class="image-container">
+                            <img 
+                                src="https://static.todamateria.com.br/upload/im/ag/imagem1-5.jpg" 
+                                alt="Figuras geométricas planas" 
+                            />
+                        </div>
+                        <h2 class="card-title">Circuferência</h2>
+                        <p class="card-description">
+                            Cálculos de figuras circulares
+                        </p>
+                    </div>
+                </button>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            
+            <!-- Lucas -->
+            <div class="footer-item" onclick="window.open('https://github.com/lucastuia', '_blank')">
+                <svg class="github-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                <span class="footer-text">Lucas</span>
+            </div>
+
+            <!-- Leo -->
+            <div class="footer-item" onclick="window.open('https://github.com/LeonardoGStrey', '_blank')">
+                <svg class="github-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                <span class="footer-text">Leo</span>
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>
