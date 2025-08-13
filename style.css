@@ -1,0 +1,275 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+.header {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.header-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 300;
+    color: #f1f5f9;
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
+/* Main Content */
+.main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+}
+
+/* Card Styles */
+.card {
+    background-color: #1a1a1a;
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 1px solid #333333;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.card:hover {
+    background-color: #262626;
+    border-color: #4a4a4a;
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card:active {
+    transform: translateY(-4px) scale(1.01);
+}
+
+.card-content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.image-container {
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    position: relative;
+}
+
+.card-image {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.card:hover .card-image {
+    transform: scale(1.1);
+}
+
+.card-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 300;
+    color: #f1f5f9;
+    margin-bottom: 1rem;
+    letter-spacing: 0.025em;
+}
+
+.card-description {
+    color: #9ca3af;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+/* Footer Styles */
+.footer {
+    padding: 1.5rem 1rem;
+    border-top: 1px solid #333333;
+}
+
+.footer-content {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.footer-item:hover {
+    background-color: #1a1a1a;
+    transform: translateY(-2px);
+}
+
+.github-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #9ca3af;
+    transition: color 0.3s ease;
+}
+
+.footer-item:hover .github-icon {
+    color: #ffffff;
+}
+
+.footer-text {
+    color: #9ca3af;
+    font-weight: 300;
+    letter-spacing: 0.025em;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.footer-item:hover .footer-text {
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        padding: 1.5rem 1rem;
+    }
+    
+    .main {
+        padding: 1.5rem 1rem;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .footer-content {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        gap: 1.5rem;
+    }
+    
+    .card {
+        padding: 1.25rem;
+    }
+    
+    .card-image {
+        height: 10rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Loading Animation */
+.card-image {
+    background-color: #2a2a2a;
+}
+
+.card-image:not([src]) {
+    background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus States */
+.card:focus,
+.footer-item:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .card {
+        border-color: #666666;
+    }
+    
+    .card:hover {
+        border-color: #ffffff;
+    }
+}
